@@ -7,7 +7,7 @@ body,
 
 #app {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* flex-direction: row;
 
   align-items: flex-start;
@@ -18,9 +18,23 @@ body,
 .box {
   width: 300px;
   height: 60px;
-  /* background: #f00; */
   margin: 5px;
   /* flex-grow: 1; */
   /* flex-shrink: 0; */
   /* flex: 1 0; */
+}
+
+.red {
+  background: #f00;
+  order: 2;
+}
+
+.green {
+  background: #0f0;
+  order: 1;
+}
+
+.blue {
+  background: #00f;
+  order: 0;
 }
