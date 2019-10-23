@@ -2,15 +2,468 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Curso Flexbox</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Twitter Flexbox</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="app">
-      <div class="box red"></div>
-      <div class="box green"></div>
-      <div class="box blue"></div>
+    <header id="main-header">
+      <div class="content">
+        <!-- O flexbox trata texto, img, etc dentro do li como elementos diferentes -->
+        <nav>
+          <ul>
+            <li><img src="./assets/images/home.svg" alt="Home" /> Home</li>
+            <li>
+              <img src="./assets/images/notification.svg" alt="Notifications" />
+              Notifications
+            </li>
+            <li>
+              <img src="./assets/images/message.svg" alt="Messages" /> Messages
+            </li>
+          </ul>
+        </nav>
+
+        <img src="./assets/images/logo.svg" alt="Twitter" />
+        <div class="side">
+          <input type="text" placeholder="Search on Twitter" />
+          <img src="./assets/images/avatar.png" alt="Search" />
+          <button type="button">Tweet</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="banner">
+      <h1>Hello World!</h1>
+    </div>
+
+    <div class="bar">
+      <div class="content">
+        <ul>
+          <li class="active">
+            <span>Tweets</span>
+            <strong>1728</strong>
+          </li>
+          <li>
+            <span>Followings</span>
+            <strong>1235</strong>
+          </li>
+          <li>
+            <span>Followers</span>
+            <strong>1123</strong>
+          </li>
+          <li>
+            <span>Favorites</span>
+            <strong>1234</strong>
+          </li>
+          <li>
+            <span>Lists</span>
+            <strong>1253</strong>
+          </li>
+          <li>
+            <span>Moments</span>
+            <strong>765</strong>
+          </li>
+        </ul>
+
+        <div class="actions">
+          <button>Follow</button>
+          <img src="./assets/images/more.svg" alt="More" />
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-content content">
+      <aside class="profile">
+        <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+        <h1>Dev Foo</h1>
+        <span>@foo</span>
+        <p>
+          Web, Design & Rock 'n roll. Partner/UI Designer at @foo_bar. Musician
+          in @foo
+        </p>
+
+        <ul class="list">
+          <li>
+            <img src="./assets/images/place.svg" alt="Place" />Namur, Belgium
+          </li>
+          <li>
+            <img src="./assets/images/url.svg" alt="URL" />
+            <a href="#">foo.me</a>
+          </li>
+          <li>
+            <img src="./assets/images/joined.svg" alt="Joined" />Joined June
+            2007
+          </li>
+          <li>
+            <img src="./assets/images/born.svg" alt="Born" />Born the 20th of
+            June 1978
+          </li>
+        </ul>
+
+        <div class="widget followers">
+          <strong
+            ><img src="./assets/images/followers.svg" alt="Followers" />73
+            followers that you know</strong
+          >
+
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <div class="widget medias">
+          <strong
+            ><img src="./assets/images/medias.svg" alt="Medias" />266 photos and
+            videos</strong
+          >
+
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="timeline">
+        <nav>
+          <a href="#" class="active">Tweets</a>
+          <a href="#">Tweets and replies</a>
+          <a href="#">Medias</a>
+        </nav>
+        <!-- Sempre que muda o fluxo de direção do conteudo do elemento, criamos uma div/container/elemento para ajustar o flex-direction  -->
+        <ul class="tweets">
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="avatar" src="./assets/images/avatar.png" alt="Avatar" />
+            <div class="info">
+              <strong
+                >Foo bar<span>@foo</span>
+                <span class="tweet-date">26 Jan</span>
+              </strong>
+              <p>
+                app @itsmeDigitalID désinstallée puis réinstallée, comment faire
+                pour retrouver son compte ? Ma banque dit que mon token existe
+                déjà #UX
+              </p>
+              <div class="actions">
+                <a href="#"
+                  ><img src="./assets/images/comments.svg" alt="Comments" />3</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/retweet.svg" alt="Retweet" />4</a
+                >
+                <a href="#"
+                  ><img src="./assets/images/like.svg" alt="Like" />3</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <aside class="widgets">
+        <div class="widget follow">
+          <div class="title">
+            <strong>Who to follow</strong>
+            <a href="#">Refresh</a>
+            <a href="#">View all</a>
+          </div>
+          <ul>
+            <li>
+              <div class="profile">
+                <img src="./assets/images/avatar.png" alt="Avatar" />
+                <div class="info">
+                  <strong>Spade <span>@foo</span></strong>
+                  <button>Follow</button>
+                </div>
+              </div>
+              <a href="#">x</a>
+            </li>
+            <li>
+              <div class="profile">
+                <img src="./assets/images/avatar.png" alt="Avatar" />
+                <div class="info">
+                  <strong>Spade <span>@foo</span></strong>
+                  <button>Follow</button>
+                </div>
+              </div>
+              <a href="#">x</a>
+            </li>
+            <li>
+              <div class="profile">
+                <img src="./assets/images/avatar.png" alt="Avatar" />
+                <div class="info">
+                  <strong>Spade <span>@foo</span></strong>
+                  <button>Follow</button>
+                </div>
+              </div>
+              <a href="#">x</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="widget trends">
+          <div class="title">
+            <strong>Trends</strong>
+            <a href="#">Change</a>
+          </div>
+          <ul>
+            <li><a href="#">#SportInfoDay</a></li>
+            <li><a href="#">#womenleaders</a></li>
+            <li><a href="#">#VisitesDomicili</a></li>
+            <li><a href="#">#EuropeanParliar</a></li>
+            <li><a href="#">#blindgetrouwd</a></li>
+            <li><a href="#">#UXDesign</a></li>
+            <li><a href="#">#UIDesign</a></li>
+            <li><a href="#">#CleanAirNow</a></li>
+          </ul>
+        </div>
+
+        <div class="widget copyright">
+          <p>
+            © 2018 Twitter À propos Centre d'assistance Conditions Politique de
+            confidentialité Cookies Informations sur la publicité
+          </p>
+        </div>
+      </aside>
     </div>
   </body>
 </html>
