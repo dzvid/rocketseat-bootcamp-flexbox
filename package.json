@@ -1,0 +1,22 @@
+{
+  "name": "rocketseat-bootcamp-flexbox",
+  "version": "1.0.0",
+  "description": "Twitter timeline clone using Flexbox.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "./node_modules/.bin/gh-pages -d ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tukno/rocketseat-bootcamp-flexbox.git"
+  },
+  "author": "David",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tukno/rocketseat-bootcamp-flexbox/issues"
+  },
+  "homepage": "https://github.com/tukno/rocketseat-bootcamp-flexbox#readme",
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
