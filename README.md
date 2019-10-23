@@ -16,6 +16,5 @@
     <br /> -->
     <br />
     <a href="https://tukno.github.io/rocketseat-bootcamp-flexbox" target="_blank">View Demo</a>
-    <a href="#">View Demo</a>
   </p>
 </p>
